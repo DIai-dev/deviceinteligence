@@ -1,0 +1,142 @@
+.faq-chat-section {
+  background: #000;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.chat-heading {
+  font-size: 3.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 25px;
+  color: #fff;
+  transform: scale(0.8);
+  opacity: 0;
+  transition: all 0.6s ease-in-out;
+  font-family: var(--font-zen-tokyo);
+  color: #ff9600;
+}
+
+.chat-heading.grow-in {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.chat-box {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 20px;
+  margin: 0 auto 20px;
+  max-width: 700px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 150, 0, 0.15);
+}
+
+.chat-item {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.chat-question {
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #ff9600;
+}
+
+.chat-answer {
+  color: #fff;
+  background: rgba(255, 255, 255, 0.03);
+  border-left: 3px solid #ff9600;
+  padding: 8px 15px;
+  border-radius: 6px;
+}
+
+.chat-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.08);
+  color: #fff;
+}
+
+.chat-form button {
+  background-color: #ff9600;
+  color: #000;
+  padding: 12px 24px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.chat-form button:hover {
+  background-color: #ffa733;
+}
+
+@media (max-width: 768px) {
+  .chat-heading {
+    font-size: 2.2rem;
+  }
+
+  .chat-box {
+    max-width: 100%;
+    padding: 16px;
+  }
+
+  .chat-form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .chat-form input {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .chat-form button {
+    width: 100%;
+    font-size: 1rem;
+    padding: 12px;
+  }
+
+  .chat-question {
+    font-size: 1rem;
+  }
+
+  .chat-answer {
+    font-size: 0.95rem;
+    padding: 10px 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chat-heading {
+    font-size: 1.8rem;
+  }
+
+  .chat-form input,
+  .chat-form button {
+    font-size: 0.95rem;
+  }
+
+  .chat-box {
+    font-size: 0.95rem;
+    padding: 14px;
+  }
+}

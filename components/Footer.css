@@ -1,0 +1,384 @@
+/* Footer container */
+.footer {
+  background-color: #000000;
+  font-family: "Arial", sans-serif;
+  padding: 20px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.footer-logo,
+.footer-links,
+.footer-innovation,
+.footer-social,
+.footer-contact {
+  width: 22%;
+  margin-bottom: 20px;
+}
+
+.footer-logo {
+  padding-right: 20px;
+  margin-top: 50px;
+}
+
+.flogo{
+  width: 100%;
+  height: auto;
+  max-width: 200px;
+}
+
+.footer-pitch {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+.footer-links {
+  color: #ff9600;
+}
+
+.footer-links a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  margin: 10px 0;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #ff9600;
+  transform: translateY(-4px);
+}
+
+/* Social Links */
+.footer-social {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Toggle Button */
+.social-toggle-btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1.2rem;
+  background-color: #0f172a;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.social-toggle-btn:hover {
+  background-color: #1e293b;
+}
+
+/* Social Icons Half-Sphere Reveal */
+.footer-social-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-height: 0;
+  transform: scale(0);
+  clip-path: circle(0% at 50% 50%);
+  transition: all 0.6s ease-in-out;
+  overflow: hidden;
+}
+
+.footer-social-icons.show-sphere {
+  max-height: 400px;
+  transform: scale(1);
+  clip-path: ellipse(75% 50% at 50% 50%);
+}
+
+.footer-social-icons .social-icon {
+  width: 20px;
+  height: 25px;
+  transition: transform 0.3s ease-in-out;
+  margin-top: 10px;
+}
+
+.footer-social-icons .social-icon:hover {
+  transform: scale(1.2);
+}
+
+/* IoT Status */
+.footer-iot-status {
+  background-color: #222;
+  padding: 10px;
+  text-align: center;
+  font-size: 14px;
+  font-family: "Press Start 2P", "Courier New", Courier, monospace;
+  letter-spacing: 1px;
+}
+
+.footer-iot-status marquee {
+  color: #ff9600;
+  font-weight: bold;
+}
+
+/* Tech Stack */
+.footer-tech-stack {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.footer-tech-stack h3 {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.tech-stack-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.tech-icon {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  transition: transform 0.3s ease-in-out;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+}
+
+/* Developer Mode */
+.footer-developer-mode {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.developer-mode-btn {
+  background-color: #1e1e1e;
+  color: #ff9600;
+  border: none;
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.developer-mode-btn:hover {
+  background-color: #ff9600;
+  color: #fff;
+  transform: translateY(-4px);
+}
+
+/* Developer Mode Info */
+.developer-info {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 30px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.developer-info h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.developer-info p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.developer-info pre {
+  background-color: #333;
+  color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: monospace;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Hide Site Content when Developer Mode Active */
+.developer-mode-active .footer-container {
+  display: none;
+}
+
+/* Contact */
+.footer-contact {
+  font-size: 14px;
+}
+
+.footer-contact h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #ff9600;
+}
+
+.footer-contact p {
+  margin: 5px 0;
+  color: #ccc;
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #aaa;
+}
+
+.scrolling-text {
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  animation: scroll-left 5s linear infinite;
+  width: 800px;
+  color: #ff9600;
+}
+
+@keyframes scroll-left {
+  from {
+    transform: translateX(5%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-innovation,
+  .footer-social,
+  .footer-contact {
+    width: 90%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .footer-social-icons {
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .footer-social-icons .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .developer-mode-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .developer-info h2 {
+    font-size: 20px;
+  }
+
+  .developer-info p,
+  .developer-info pre {
+    font-size: 14px;
+  }
+
+  .footer-iot-status {
+    font-size: 12px;
+    padding: 8px;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .social-toggle-btn {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 30px 15px;
+  }
+
+  .footer-logo,
+  .footer-links,
+  .footer-innovation,
+  .footer-social,
+  .footer-contact {
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .footer-links a {
+    font-size: 13px;
+  }
+
+  .footer-pitch {
+    font-size: 13px;
+  }
+
+  .footer-contact p {
+    font-size: 13px;
+  }
+
+  .footer-social-icons .social-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .tech-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .developer-mode-btn {
+    font-size: 13px;
+    padding: 8px 16px;
+  }
+
+  .developer-info h2 {
+    font-size: 20px;
+  }
+
+  .developer-info p,
+  .developer-info pre {
+    font-size: 14px;
+  }
+
+  .footer-iot-status {
+    font-size: 12px;
+    padding: 8px;
+    width: 50%;
+    display: none;
+  }
+
+  .footer-bottom {
+    font-size: 12px;
+    margin-top: 15px;
+  }
+
+  .social-toggle-btn {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+  }
+}
